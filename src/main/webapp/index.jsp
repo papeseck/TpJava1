@@ -1,23 +1,34 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE>
+ pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Login</title>
+<meta charset="ISO-8859-1">
+<title>TP JAVA</title>
+<link rel="stylesheet"
+ href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+ crossorigin="anonymous">
 </head>
 <body>
 
-<fieldset>
-    <legend>Login</legend><br>${message}<br><br>
-    <form method="post" action="index">
-        <label for="username">Username :</label>
-        <input type="text" id="username" name="username" /><br><br>
-        <label for="password">Password :</label>
-        <input type="password" id="password" name="password" /><br><br>
-        <input type="submit" value="Connexion"/>
-    </form>
-</fieldset>
-
+ <div class="container col-md-8 col-md-offset-3" style="overflow: auto">
+  <h1>Login Form</h1>
+  <form action="index" method="post">
+   <div class="form-group">
+    <label for="uname">User Name:</label> <input type="text"
+     class="form-control" id="username" placeholder="User Name"
+     name="username" required>
+   </div>
+   <div class="form-group">
+    <label for="uname">Password:</label> <input type="password"
+     class="form-control" id="password" placeholder="Password"
+     name="password" required>
+   </div> 
+    
+    
+   <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+ </div>
 </body>
 </html>

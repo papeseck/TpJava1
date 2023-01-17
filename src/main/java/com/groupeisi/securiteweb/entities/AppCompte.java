@@ -49,8 +49,5 @@ public class AppCompte implements Serializable {
         this.appDroits = appDroits;
     }
 
-    public boolean validate(String username, String password) {
-
-        return false;
-    };
+  
 }
