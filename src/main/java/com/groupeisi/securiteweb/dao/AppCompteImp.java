@@ -8,7 +8,7 @@ import com.groupeisi.securiteweb.entities.AppDroit;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class AppCompteImp extends RepostoryImpl<AppCompte> implements Icompte {
+public  class AppCompteImp extends RepostoryImpl<AppCompte> implements Icompte {
     @Override
     public AppCompte getByUsername(String username) {
 
@@ -45,4 +45,22 @@ public abstract class AppCompteImp extends RepostoryImpl<AppCompte> implements I
         }
         return appCompteDto;
     }
+
+	@Override
+	public AppCompte getUsername(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public AppCompte getPassword(String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public AppDroit getByNom(String nom) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
