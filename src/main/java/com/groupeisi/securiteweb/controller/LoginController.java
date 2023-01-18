@@ -13,11 +13,8 @@ import com.groupeisi.securiteweb.dao.UserDao;
 
 
 
-/**
- * @email Ramesh Fadatare
- */
 
-@WebServlet("/LoginController")
+@WebServlet(value = "/login", name = "login")
 public class LoginController extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private UserDao loginDao;
@@ -36,7 +33,7 @@ public class LoginController extends HttpServlet {
         try {
             authenticate(request, response);
         } catch (Exception e) {
-            // TODO Auto-generated catch block
+            
             e.printStackTrace();
         }
     }
@@ -47,10 +44,10 @@ public class LoginController extends HttpServlet {
         String password = request.getParameter("password");
 
         if (loginDao.validate(username, password)) {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("login-success.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/login-success.jsp");
             dispatcher.forward(request, response);
         } else {
-            throw new Exception("Login not successful..");
+            throw new Exception("Usename or Password incorrect");
         }
     }
 }

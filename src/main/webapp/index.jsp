@@ -14,7 +14,7 @@
 
  <div class="container col-md-8 col-md-offset-3" style="overflow: auto">
   <h1>Login Form</h1>
-  <form action="index" method="post">
+  <form action="login" name="login" method="post">
    <div class="form-group">
     <label for="uname">User Name:</label> <input type="text"
      class="form-control" id="username" placeholder="User Name"
